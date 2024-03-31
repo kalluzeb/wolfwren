@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tris</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600')
+    </style>
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap')
+</style>
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap')
+</style>
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap')      
+</style>
+   
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap')
+    </style>
+
+    
+    
+    <script>
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "http://www.javascriptkit.com/script/script2/click.ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+//Initialize two sound clips with 1 fallback file each:
+
+var mouseoversound=createsoundbite("https://a.tumblr.com/tumblr_ojrn7aGBii1w2e2oyo1.mp3")
+
+</script>
+
+  </head>
+  
+  
+  
+  
+  
+  
+  <body>
+   
+        <div id="container">
+          <div id="welcome">Welcome</div>
+            <div id="headerArea">
+                <div id="header" style="margin-bottom: 0px; height: 320px;"></div>
+                <div id="topBar"><marquee> it's quiet, but can you hear it? little by little the tides are changing, and the world with them. ☆ </marquee></div>
+            </div>
+
+            <div id="flex">
+                <aside id="leftSidebar" style="margin-right: 0px;">
+
+          
+          <div id="navigation"> <a href="/index.html" onmouseover="mouseoversound.playclip()" height="36" width="70"><img src="https://i.imgur.com/HkPGh2s.gif"></a> <a href="mailto:woofwren@gmail.com" onmouseover="mouseoversound.playclip()" height="36" width="70"><img src="https://www.fancyparts.com/fancyparts/cg/icon/kuma01/mail01k.gif"></a></div>
+          
+          <div class="navheartdivider"><img src="https://www.fancyparts.com/fancyparts/cg/line/line_hart00/line_hart00_l_09s.gif" height="15" width="140"> </div>
+          <div id="navigation2"> 
+          <ul>
+          <li>
+                <a href="/about.html" onmouseover="mouseoversound.playclip()">About Me</a> </li>
+          <li>  <a href="/about.html" onmouseover="mouseoversound.playclip()">Thoughts</a> </li>
+          <li>  <a href="/about.html" onmouseover="mouseoversound.playclip()">Stuff I Like</a> </li>
+          <li>  <a href="/about.html" onmouseover="mouseoversound.playclip()">Graphics</a> </li>
+          </ul>
+          </div>
+          
+          <div class="stamps"> <img src="https://i.imgur.com/2ASakgJ.gif"> <img src="https://i.imgur.com/yLuKCfh.png"><img src="https://i.imgur.com/Vm9VtLS.jpeg"> <img src="https://i.imgur.com/ZxrKQhk.png"> <img src="https://i.imgur.com/KzVnEnc.png"> <img src="https://i.imgur.com/UaRNIrR.png"> <img src="https://i.imgur.com/UgY85Zs.png"></div>  
+    
+                </aside>
+                
+                
+                
+                <main>
+                
+            <img src="https://i.imgur.com/9nku0As.png" width="220" height="84" class="center">
+                
+                <div class="box">
+               
+                    <p>hi basically im tris.</p>
+                   
+
+                    <p> i dont know how to talk about my feelings so i made this website. i basically just talk about stuff im                      thinking about and ill show you some stuff i like to do. im not a very good coder so it might look bad but thats ok. it reflects what the inside of my brain looks like.</p>              
+                  
+</div>
+                    
+<div class="heartdivider"> <img src="https://www.fancyparts.com/fancyparts/cg/line/line_hart01/line_hart01_08.gif" width="390" height="14"> </div>
+                  <div class="box">
+                 <img src="https://i.pinimg.com/564x/df/7e/ad/df7eadf6b65c87364bd83a850bc850ab.jpg" width="320" height="240" class="center">  </div>
+                  
+                </main>
+                
+               
+                
+                <aside id="rightSidebar" style="margin-left: 0px;">
+                  
+           <div class="animegirlline"><img src="https://i.imgur.com/yGkVpI9.png" width="160" height="35"></div>
+                  <br>
+  
+  
+                    <div class="rightnavbox">
+                      <img src="https://i.imgur.com/E8ePEFf.gif" class="center">
+                        <p>Name: Wolf
+                          <br>
+                      Age: 23
+                          <br>
+                      Birthday: Dec 15
+                          <br>
+                      Location: it's a secret.
+                          <br>
+                        Clan: Wren</p>
+                      
+                      <img src="https://www.fancyparts.com/fancyparts/cg/icon/kumakao/kkao10s.gif" width="40" height="33" class="center">
+                       
+                    </div>
+                  
+                  <div class="calendar1" style="position: relative; right: 10px;  width: 160px; height: 215px; overflow: hidden; z-index: 0;"><iframe style="height: 252px; border: 0px;" src="https://pukapuka.neocities.org/10292837" class="colored" scrolling="no"></iframe></div>
+             
+              
+                 
+                </aside>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+        <style>
+
+
+            :root {
+                --header-image: url('https://i.imgur.com/azgyeTs.jpeg');
+                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
+
+                /* colors */
+                --content: #f7fcff;
+            }
+
+
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+
+          
+
+            body {
+                margin: 0;
+                width: 860px;
+                 margin: auto;
+               /*  background-color: #08031A; */
+                color: #0029bf;
+                background-image: url('https://www.fancyparts.com/fancyparts/cg/pattern/dot_04/dot-04-36.gif');
+                background-size:repeat;
+                margin-top:22px;
+                margin-bottom:25px;
+                border: 4px ridge #848c91;
+
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+
+
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #00c8de;
+            }
+          
+            #container a:hover {
+              margin-left:5px;
+                color: #b921ff;
+            }
+
+            #header {
+                width:100%;
+                background-color: #a3daff;
+                /* header color here! */
+                height: 500px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+
+          #navigation {
+          margin-left:20px;
+          }
+
+          #navigation2 {
+          margin-left:0px;
+             font-family: "Edu NSW ACT Foundation";
+            font-style: normal;
+            font-size:19px;
+        list-style-image: url("https://www.fancyparts.com/fancyparts/cg/icon/ball01/ball_s_18.gif");
+          }
+
+            #navbar {
+                height: 40px;
+                background-color: #13092D;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-image: url("https://www.fancyparts.com/fancyparts/cg/icon/ball01/ball_s_18.gif");
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+        
+            #navbar li a {
+                color: #00c8de;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+          
+            #navbar li a:hover {
+                color: #a49cba;
+                text-decoration: underline;
+            }
+
+
+
+            #flex {
+                display: flex;
+            }
+
+
+            aside {
+               background-color:#fff;
+                width: 160px;
+                padding: 10px;
+                font-size: smaller;
+            }
+
+
+
+            main {
+                background-color: #43256E;
+                background-image:url('https://www.fancyparts.com/fancyparts/cg/pattern/dot_04/dot-04-45.gif');
+                /* background-size:500px; */
+                background-size:repeat;
+                flex: 1;
+                padding: 10px;
+                order: 2;
+            }
+           
+         
+          
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #13092D;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #00c8de;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #00c8de;
+            }
+          
+          
+          .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+        }
+          
+                   
+        .box {
+               background: rgb(255,255,255);
+background: linear-gradient(rgba(255,255,255,1) 0%, rgba(227,231,232,1) 100%);
+                margin:6px;
+                padding: 8px;
+                border: 2px groove lightgray;
+          border-radius:10px;
+            }
+         
+            .rightnavbox {
+                font-family: "Imbue", serif;
+              font-size:17px;
+                background-size:repeat;
+               background-image:url('https://www.fancyparts.com/fancyparts/cg/pattern/dot_03/dot-03-95.gif');
+              line-height:18px;
+                margin:6px;
+                padding: 8px;
+                border: 2px groove lightgray;
+    border-top-width: 2px;
+    border-top-style: groove;
+    border-top-color: lightgray;
+    border-right-width: 2px;
+    border-right-style: groove;
+    border-right-color: lightgray;
+    border-bottom-width: 2px;
+    border-bottom-style: groove;
+    border-bottom-color: lightgray;
+    border-left-width: 2px;
+    border-left-style: groove;
+    border-left-color: lightgray;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+            }
+           
+            .gif1 {
+                background-color: #fff;
+                margin:6px;
+                margin-left:13px;
+
+            }
+            
+           .stamps {
+             margin-left: 20px;
+             margin-bottom:10px;
+           }
+
+            /* CSS for extras */
+
+            #topBar {
+              font-family: "Source Code Pro", monospace;
+              text-shadow: 1px 1px 3px black;
+              border-top: 2px solid #848c91;
+              border-bottom:2px solid #848c91;
+                width: 100%;
+                height: 30px;
+                padding-bottom: 9px;
+                padding-top:5px;
+                font-size: 18px;
+               background-color: #fff;
+               background-size:repeat;
+               background-image:url('https://www.fancyparts.com/fancyparts/cg/pattern/strip_05/strip_05_407.gif');
+              color: white;
+               
+            }
+          
+                    .heartdivider {
+                margin:6px;
+                margin-left:35px;
+                padding: 8px;
+            }
+            
+     /*      .tristanswebsite {
+                margin:1px;
+                margin-left:100px;
+            } */
+            
+          .navheartdivider{
+            margin-top:15px;
+            margin-bottom:5px;
+          }
+          
+          
+
+          #calendar{
+           margin-right:8px;
+          }
+          
+        #calendar1{
+           margin-right:14px;
+          }
+          
+          
+          #welcome{
+            top:260px;
+            left:210px;
+            position:absolute;
+            font-family: "Lovers Quarrel", cursive;
+            font-size:100px;
+            color: white;
+            text-shadow: 1px 1px black;
+          }
+	
+          .animegirlline{
+            width:160px;
+            height:35px;
+            position:relative;
+            right: 10px;
+          }
+          
+         .hamtaro{
+            width:160px;
+            height:35px;
+            position:relative;
+            right: 10px;
+          }
+
+
+            /* by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDXCG9R-_2YPkp1-jbRm-soaPWP08IjaNY",
+    authDomain: "tris-site.firebaseapp.com",
+    projectId: "tris-site",
+    storageBucket: "tris-site.appspot.com",
+    messagingSenderId: "1023502444422",
+    appId: "1:1023502444422:web:a14605e9c6cea3a6512e07"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+    
+  </body>
+</html>
+
